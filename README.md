@@ -11,6 +11,8 @@ https://github.com/mbaldassaro/sampler
 
 ### Practice website link
 
+https://jhu-statprogramming-fall-2022.github.io/biostat840-project3-pkgdown-peterliu599/
+
 ### Customization
 
 * use bootswatch lux
