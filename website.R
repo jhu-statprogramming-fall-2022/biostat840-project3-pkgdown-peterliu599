@@ -1,0 +1,7 @@
+install.packages(c("usethis", "pkgdown"))
+install.packages("sampler")
+library(usethis)
+library(pkgdown)
+use_pkgdown()
+build_site()
+use_pkgdown_github_pages()

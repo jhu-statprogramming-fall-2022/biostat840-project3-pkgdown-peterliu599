@@ -1,0 +1,108 @@
+---
+title: "Vignettes"
+author: "Peter Liu"
+date: "2022-12-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(here)
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+getwd()
+# install.packages(sampler)
+require(sampler)
+library(tidyverse)
+library(lubridate)
+library(purrr)
+```
+
+### Question
+
+-Among all password types, which category is the easiest to be cracked?
+-Is the strength of the password related to the time to crack it?
+
+### Data link with dictionary
+
+This is a data set on a variety of most commonly used passwords sourced from Information is Beautiful. The data and the dictionary can be found from
+
+https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-01-14. 
+
+### Data loading & wrangling
+
+```{r}
+main_dir <- here()
+sub_dir <- "data"
+if (file.exists(sub_dir)){
+      # specifying the working directory
+      setwd(file.path(main_dir, sub_dir))
+} else {
+      # create a new sub directory inside
+      # the main path
+      dir.create(file.path(main_dir, sub_dir))
+        
+      # specifying the working directory
+      setwd(file.path(main_dir, sub_dir))
+}
+if(!file.exists(here("data","passwords.RDS"))){
+  passwords <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-14/passwords.csv')
+  # save the files to RDS objects
+  saveRDS(passwords, file = "passwords.RDS")
+}
+passwords <- readRDS("passwords.RDS")
+```
+
+```{r}
+x.1 <- passwords %>% drop_na()
+x.2 <- x.1 %>% filter(offline_crack_sec < 0.5)
+# x.2$category <- as.factor(x.2$category)
+ggplot(x.2) + geom_boxplot(aes(y = offline_crack_sec, x = category)) + 
+  labs(title = "Offline cracking time within different category",
+       subtitle = "Nerdy pop, sport, and password related codes are slightly harder to crack",
+       caption = "Plot made by Bolun Liu") + 
+  xlab("Category") + ylab("Time") + theme(axis.text.x = element_text(angle = 45, hjust=1))
+
+x.3 <- x.1 %>% filter(str_detect(time_unit, "day"))
+
+names <- rep("simple", length(which(x.3$category == "simple-alphanumeric")))
+set_names(x.3$category[which(x.3$category == "simple-alphanumeric")], names)
+
+ggplot(x.3) + geom_point(aes(y = strength, x = offline_crack_sec)) + 
+    labs(title = "Password strength against offline cracking time",
+       subtitle = "Their mannual set password strength doesn't seem to be a good criteria. \nI am quite surprised by this result.\n This suggests the strength here might not be a base for accurate analysis.",
+       caption = "Plot made by Bolun Liu") + 
+  xlab("Time") + ylab("Strength")
+
+x.4 <- x.1 |> split(x.1$category)
+x.4 |> map(.f = ~mean(.x$rank))
+
+x.5 <- x.3 %>% select(password, category, rank, strength)
+
+ggplot(data = x.5) + geom_histogram(aes(x = rank)) + facet_grid(rows = vars(category)) +  
+  labs(title = "Histograms of password ranks by category",
+       subtitle = "Although password-related and rude passwords have higher ranks on average,\nanimal-related and simple-alphanumeric passwords appears to be most common individually.",
+       caption = "Plot made by Bolun Liu") + 
+  xlab("Rank statistics") + ylab("Frequency")
+
+n<-rsampcalc(N=500, e=1, ci=95, p=0.5, over=0)
+n
+strata <- ssampcalc(df=x.1, n=n, strata=category, over=0)
+strata
+```
+
+### Result
+
+From average rank statistics, category password-related ("password") and rebellious-rude ("biteme") type passwords are the most common. Individually, simple-alphanumeric code such as "1111" and "aaaa" are the most popular. Among all category, nerdy-pop, sport, and password-related codes are relatively harder to crack, but the different can be negligble. Moreover, the strength in the data set is not related to the cracking time, indicating it is not a good candidate for data analysis. 
+
+If I were to sample from the data set that so that I can recover the sample mean with a marginal error of 1 and a 95% CI, the effective sample size is 476, which is calculated from rsampcalc(). If I would to sample within different strata (here, catagory) by their sample sizes, ssampcalc() gives a reasonable sampling scheme. 
+
+### function used 
+
+tidyr: drop_na(), filter(), select(), as_tibble(), str_detect(), as_factor()
+
+purrr: map(), set_name()
+
+ggplot: geom_point(), geom_histogram(), geom_boxplot()
+
+sampler: rsampcalc(), ssampcalc()
+
