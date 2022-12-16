@@ -1,8 +1,6 @@
 # sampler R package
 ![R](https://r-pkg.org/badges/version/sampler)  [![Rdoc](http://www.rdocumentation.org/badges/version/sampler)](http://www.rdocumentation.org/packages/sampler)
 
-For some reason my website is not showing properly and I don't know why. I tried the usethis_github_page() and the deploy_to_branch() on both my PC and Mac. Both of them run without error, and I do observe that the html files are uploaded onto gh-pages branch. When I use https://htmlpreview.github.io/ to see the files, they are the website I created. I tried many other approaches and play with github pages for an entire night and it doesn't work. I deem my effort is enough for this project and I will just left it here. If you would like to check the website, I encourage you to use the https://htmlpreview.github.io/ or to clone the package locally. Sorry for the inconvenience.
-
 ### Original author
 
 Michael Baldassaro, Mara Averick
