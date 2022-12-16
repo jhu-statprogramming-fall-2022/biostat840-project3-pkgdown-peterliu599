@@ -87,167 +87,144 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">alsample</span> <span class="op">&lt;-</span> <span class="fu"><a href="rsamp.html">rsamp</a></span><span class="op">(</span>df<span class="op">=</span><span class="va">albania</span>, <span class="fl">544</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">alreceived</span> <span class="op">&lt;-</span> <span class="fu"><a href="rsamp.html">rsamp</a></span><span class="op">(</span>df<span class="op">=</span><span class="va">alsample</span>, <span class="fl">390</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">rmissing</span><span class="op">(</span>sampdf<span class="op">=</span><span class="va">alsample</span>, colldf<span class="op">=</span><span class="va">alreceived</span>, col_name<span class="op">=</span><span class="va">qvKod</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          qarku Q_ID        bashkia BAS_ID    zaz</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1        Kukes    8        Tropoje     88  ZAZ 9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2         Fier    5        Divjake     51 ZAZ 56</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3        Vlore   12         Himare    123 ZAZ 86</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4       Tirane   11         Tirane    111 ZAZ 37</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5        Vlore   12          Vlore    128 ZAZ 81</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6       Tirane   11         Tirane    111 ZAZ 34</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7        Berat    1         Kucove     13 ZAZ 63</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8        Lezhe    9          Lezhe     92 ZAZ 13</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9      Shkoder   10        Shkoder    105  ZAZ 2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10       Kukes    8          Kukes     83 ZAZ 11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11        Fier    5    Mallakaster     55 ZAZ 61</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12        Fier    5          Patos     56 ZAZ 59</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13       Lezhe    9        Mirdite     94 ZAZ 14</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14      Tirane   11         Tirane    111 ZAZ 33</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15      Tirane   11           Vore    119 ZAZ 26</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16     Elbasan    4        Elbasan     44 ZAZ 48</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17       Berat    1          Berat     11 ZAZ 64</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18     Shkoder   10 Malesi e Madhe    102  ZAZ 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19 Gjirokaster    6        Kelcyre     63 ZAZ 75</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20       Vlore   12         Himare    123 ZAZ 86</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21      Tirane   11         Tirane    111 ZAZ 30</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22     Elbasan    4        Elbasan     44 ZAZ 47</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               njesiaAdministrative COM_ID   qvKod zgjedhes meshkuj femra</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                            Bytyc   8303  "0469"      298     154   144</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                           Terbuf   5216  "2845"      893     473   420</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3                           Himare  12303  "4587"      715     354   361</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  Tirane - Njesia Bashkiake Nr. 7  11215  "1920"      695     342   353</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5                         Shushice  12310  "4547"      647     324   323</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Tirane - Njesia Bashkiake Nr. 4  11215  "1804"      963     486   477</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7                          Perondi   1203  "3508"      503     259   244</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8                         Shenkoll   9208  "0748"      717     366   351</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9                        Rrethinat  10310  "0114"      712     373   339</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10                           Malzi   8208  "0596"      479     243   236</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11                        Aranitas   5301  "3216"      521     284   237</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12                           Patos   5110 "30791"      771     404   367</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13                           Rubik   9306  "0885"      409     205   204</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14 Tirane - Njesia Bashkiake Nr. 3  11215 "17511"      770     386   384</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15                            Vore  11217  "1558"      802     437   365</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16                         Elbasan   4104 "23232"      989     521   468</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17                          Berat    1101  "3312"      312     158   154</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18                          Shkrel  10106  "0070"      226     111   115</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19                            Suke   6209  "4209"      455     233   222</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20                   Hore Vranisht  12313  "4594"      241     128   113</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21                      Shengjergj  11214  "1653"      246     127   119</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22                   Labinot fushe   4114 "24221"      558     286   272</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    totalSeats                                                     vendndodhja</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1           3                                              Radogoshi, Shkolla</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2          16                                           Cerme Sektor, Shkolla</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3          12                               Vuno, Ambjent privat "Meri Zisos"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4          34                                            Shkolla "Dhora Leka"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5          12                                                 Risili, Shkolla</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6          34                   Rruga "Niko Avrami ", Shkolla " Bajram Curri"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7           7                                 Rreth Tapi, shkolla 9 - Vjecare</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8           7                                       Gajush Qendra Shendetsore</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9          11                                              Guci e Re, Shkolla</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10          3                                   Kalimash, Shkolla 9 - Vjecare</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11         16                                 Aranitas 1, Qendra Shendetesore</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12         16                         Lagjia '29 Marsi', Shkolla 'Zhani Ciko'</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13          7                                        Fang, Shkolla  9-Vjecare</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14         34  Rruga "Sitki cico", Shkolla 9-vjecare "Niket Dardani"         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15         34                                                Marikaj, Shkolla</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16         14                      Lagjia 5 Maji, Lokal Privat "Sami Shabani"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17          7                          Lagja  "Clirim",  Shkolla "M.A.Virioni</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18         11                                     Bzhete Makaj(XHAJ), Shkolla</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19          5                                                   Suke, Shkolla</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20         12                                             Kallarat, Ambulanca</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21         34                                        Fag, shkolla 9 - Vjecare</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22         14                                      Mengel, Shkolla 9 -Vjecare</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ambienti totalVoters femVoters maleVoters unusedBallots damagedBallots</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1    Publik         138        68         70           162              3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    Publik         364       149        215           542              4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3    Privat         179        73        106           549              1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4    Publik         381       174        207           325              2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5    Publik         259       118        141           400              0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    Publik         398       183        215           579              5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7    Publik         198        72        126           301              1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8    Publik         294       138        156           437              0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9    Publik         280       132        148           444              0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10   Publik         255       110        145           232              1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11   Publik         268       110        158           263              0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12   Publik         349       160        189           437              0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13   Publik         191        90        101             0              0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14   Publik         386       177        209           399              0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15   Publik         464        10        454           353              1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16   Privat         498       232        266           509              1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17   Publik         158        71         87           155              0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18   Publik          89        38         51           140              1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19   Publik         233       110        123           230              1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20   Publik         135        60         75           109              1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21   Publik         152        58         94            95              3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22   Publik         358       154        204           209              2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ballotsCast invalidVotes validVotes lsi  ps pkd sfida pr  pd pbdksh adk psd</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1          138           16        122   4  67   0     0  1  50      0   0   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2          364            6        358  80 199   0     0  0  57      0   0   1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3          179            2        177  17 144   0     0  0  15      0   0   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4          381            5        376  43 113   1     1  0 195      0   0   1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5          259            2        257  22 199   0     0  0  26      0   0   1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6          398            8        390  22 207   1     2  2 128      2   0   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7          198            4        194  58  91   0     0  0  43      1   0   1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8          294            6        288  51  91   1     0  0 134      1   0   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9          280            7        273  19  95   1     0  1 131      2   0  21</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10         255            4        251  26 119   0     0  1 105      0   0   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11         268            4        264  47 150   0     0  0  53      0   0   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12         349            6        343  33 200   0     0  1  97      1   1   1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13         191            3        188  16  88   0     0  0  79      0   0   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14         386           14        372  49 186   0     3  1  85      0   0   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15         464           10        454  93 194   2     0  2 144      0   0   9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16         498           16        482  46 249   2     0  0  93      0   0   2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17         158            3        155  33  89   0     0  0  25      0   0   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18          89            1         88   2  50   0     0  0  33      0   0   2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19         233           12        221  74 115   1     0  1  24      0   1   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20         135            0        135  29  81   0     0  0  25      0   0   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21         152            4        148  11  57   1     0  0  76      1   0   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22         358            5        353  30 133   0     1  2 143      0   0   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ad frd pds pdiu aak mega pksh apd libra psSeats pdSeats lsiSeats pdiuSeats</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   0   0   0    0   0    0    0   0     0       1       2        0         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   0   0   1   19   0    0    0   0     1      10       4        2         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3   0   0   0    0   0    0    0   0     1       8       3        1         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4   0   1   4    6   0    0    0   2     9      18      11        5         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5   0   0   0    3   0    0    0   5     1       8       3        1         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6   0   0   1   11   0    0    1   1    12      18      11        5         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7   0   0   0    0   0    0    0   0     0       4       1        2         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8   1   0   0    7   0    0    0   0     2       3       3        1         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9   0   0   0    3   0    0    0   0     0       4       5        1         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10  0   0   0    0   0    0    0   0     0       1       2        0         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11  0   0  11    1   0    0    0   0     2      10       4        2         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12  0   1   0    8   0    0    0   0     0      10       4        2         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13  0   0   0    5   0    0    0   0     0       3       3        1         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14  0   3   0   29   0    0    0   0    16      18      11        5         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15  0   0   0    3   0    0    0   0     7      18      11        5         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16  0   0   1   86   0    0    0   0     3       7       3        2         2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17  0   0   1    5   0    0    0   0     2       4       1        2         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18  0   0   0    0   0    0    0   0     1       4       5        1         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19  0   0   0    0   0    0    0   0     5       3       1        1         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20  0   0   0    0   0    0    0   0     0       8       3        1         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21  0   0   0    1   0    0    0   0     1      18      11        5         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22  0   4   0   39   0    0    0   0     1       7       3        2         2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    psdSeats</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8         0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9         1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18        1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21        0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      qarku Q_ID        bashkia BAS_ID    zaz            njesiaAdministrative</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Elbasan    4        Elbasan     44 ZAZ 47                     Labinot mal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2     Fier    5      Rroskovec     57 ZAZ 60                           Kuman</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3    Vlore   12          Vlore    128 ZAZ 83                           Vlore</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  Elbasan    4         Cerrik     42 ZAZ 46                         Gostime</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5     Fier    5          Fier      52 ZAZ 57                          Topoje</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   Durres    3         Durres     31 ZAZ 22                         Durres </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7    Vlore   12          Vlore    128 ZAZ 82                           Vlore</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   Tirane   11         Tirane    111 ZAZ 35 Tirane - Njesia Bashkiake Nr. 5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9    Diber    2          Diber     22 ZAZ 19                       Maqellare</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 Shkoder   10 Malesi e Madhe    102  ZAZ 1                          Koplik</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11   Berat    1  Ura Vajgurore     19 ZAZ 62                         Cukalat</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12   Lezhe    9        Mirdite     94 ZAZ 14                         Kacinar</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13   Vlore   12          Vlore    128 ZAZ 82                           Vlore</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14  Tirane   11         Tirane    111 ZAZ 38 Tirane - Njesia Bashkiake Nr. 8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15  Tirane   11         Tirane    111 ZAZ 37 Tirane - Njesia Bashkiake Nr. 7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16   Korce    7       Pogradec     75 ZAZ 67                        Udenisht</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17 Shkoder   10        Shkoder    105  ZAZ 2                        Gur i zi</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18  Tirane   11         Tirane    111 ZAZ 30                            Dajt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19  Durres    3         Durres     31 ZAZ 23                         Durres </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20    Fier    5          Patos     56 ZAZ 59                           Patos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21 Shkoder   10        Shkoder    105  ZAZ 2                       Rrethinat</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22   Korce    7          Korce     73 ZAZ 71                          Mollaj</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    COM_ID   qvKod zgjedhes meshkuj femra totalSeats</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1    4115  "2426"      444     228   216         14</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2    5105 "30381"      626     325   301         16</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3   12312  "4455"      894     452   442         12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4    4109  "2526"      986     520   466         14</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5    5116  "3214"      795     420   375         16</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6    3101 "14241"      743     378   365         14</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7   12312  "4432"      959     474   485         12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   11215  "1844"      881     441   440         34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9    2207  "1107"      358     189   169          6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10  10104 "00471"      857     412   445         11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11   1102  "3335"      259     143   116          7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12   9302  "0791"      224     122   102          7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13  12312 "44571"      682     329   353         12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14  11215 "19401"      614     281   333         34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15  11215 "19192"      692     327   365         34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16   7404  "3936"      485     254   231         11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17  10306  "0340"      983     498   485         11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18  11204 "16251"      455     243   212         34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19   3101  "1482"      504     238   266         14</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20   5110  "3073"      839     439   400         16</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21  10310 "01021"      830     438   392         11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22   7309  "4101"      578     283   295         11</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                    vendndodhja ambienti totalVoters femVoters</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                 Labinot Mal, shkolla fillore   Publik         277         0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                Luar, Shkolla   Publik         293       149</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                      Zyrat e Nd. Ujesjellesi   Publik         384       170</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                   Gjyrale, Shkolla 9-vjecare   Publik         452       228</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                           Topoje 2,  Shkolle   Publik         358       165</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6             Lagjia 14, Shkolla "Isuf Ferra"    Publik         346       151</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                Shkolla "Teli Ndini" - kati I   Publik         345       186</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  Rruga "Kristo Floqi", Shkolla"Besnik Sykja"   Publik         544       255</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                     Dovolan, Shkolla fillore   Publik         215       119</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                          Shkolla 9- vjecare   Publik         316       154</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11                           Krotine,  Shkolla   Publik         153        68</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12                  Kacinar, Shkolla 9-vjecare   Publik          74        30</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13                 Shkolla "28 Nentori" Kati I   Publik         258       124</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14                      Shkolla "Skender Caci"   Publik         267       139</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15                        Shkolla "Dhora Leka"   Publik         350       171</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16                  Piskupat, Shkolla  Fillore   Publik         319       155</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17                   Gur i Zi, Shkolla e mesme   Publik         493       241</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18                     Priske e Madhe, Shkolla   Publik         266       110</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19                         Shkolla "Vasil Ziu"   Publik         176        95</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20         Dukas,Lokal privat, Sulejman Rrapaj   Privat         378       161</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21                 Dobrac, Qendra Shendetesore   Publik         318       142</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22                             Mollaj, Shkolla   Publik         228       109</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    maleVoters unusedBallots damagedBallots ballotsCast invalidVotes validVotes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1         277             0              0         277           18        259</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2         144           344              1         293            7        286</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3         214           521              5         384            8        376</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4         224           550              3         452           10        442</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5         193           452              0         358            5        353</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6         195           411              0         346            6        340</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7         159           633              0         345            8        337</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8         289           352              2         544            5        539</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9          96           149              1         215            2        213</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10        162           558              1         316            2        314</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11         85           108              3         153            3        150</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12         44             0              0          74            0         74</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13        134           424              0         258            3        255</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14        128           359              0         267            6        261</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15        179           355              0         350            4        346</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16        164           175              0         319            5        314</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17        252           505              4         493           11        480</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18        156           198              0         266            8        258</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19         81           338              0         176            2        174</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20        217           476              1         378           10        368</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21        176           528              0         318            0        318</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22        119           361              0         228            3        225</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    lsi  ps pkd sfida pr  pd pbdksh adk psd ad frd pds pdiu aak mega pksh apd</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1   58 121   0     1  0  48      0   0   0  0   0   0   31   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2   22 188   0     0  1  66      0   0   0  0   3   1    2   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3   31 265   0     0  1  67      0   0   0  0   0   0    5   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  142 192   0     0  0  92      0   0   0  0   0   0   15   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5   93 196   0     0  0  50      0   0   0  0   0  12    0   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6   79 155   0     0  1  84      0   0   0  0   1   0   19   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7   26 218   0     1  0  70      0   0   0  0   2   0   16   0    0    0   1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   94 278   0     4  0 121      0   1   1  0   1   0   24   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9   16 102   0     0  0  56      0   1   0  0   1   0   37   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10  20 171   0     0  0  79      0   0  35  0   0   0    4   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11  15  86   0     0  0  47      0   0   0  0   2   0    0   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12  14  38   0     0  0  18      0   0   0  0   0   0    4   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13   6 169   0     0  0  67      0   0   0  0   3   0    5   0    0    1   1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14  24 100   0     3  0 118      0   0   0  0   0   0    5   0    0    0   3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15  40 191   0     2  0  98      0   0   1  0   1   0    3   1    0    0   1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16  51 173   0     0  0  84      0   0   1  0   0   1    0   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17 138  52   1     0  0  99      1   4 156  1   0   0   24   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18  21 126   2     0  2  78      0   0   0  0   0   0   13   0    0    0   1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19  25  82   0     1  0  40      0   0   0  0   6   0   19   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20  71 218   2     0  0  64      0   8   0  0   1   1    1   0    0    2   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21  14 185   0     0  1  82      0   0  34  0   0   0    0   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22  54 109   0     0  0  60      0   0   0  0   0   0    0   0    0    0   0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    libra psSeats pdSeats lsiSeats pdiuSeats psdSeats</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1      0       7       3        2         2        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2      3      10       4        2         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3      7       8       3        1         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4      1       7       3        2         2        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5      2      10       4        2         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6      1       8       4        2         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7      3       8       3        1         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8     15      18      11        5         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9      0       2       2        1         1        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10     5       4       5        1         0        1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11     0       4       1        2         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12     0       3       3        1         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13     3       8       3        1         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14     8      18      11        5         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15     8      18      11        5         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16     4       6       4        1         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17     4       4       5        1         0        1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18    15      18      11        5         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19     1       8       4        2         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20     0      10       4        2         0        0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21     2       4       5        1         0        1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22     2       6       4        1         0        0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [ reached 'max' / getOption("max.print") -- omitted 132 rows ]</span>
 </code></pre></div>
     </div>
